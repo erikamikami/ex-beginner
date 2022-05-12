@@ -30,7 +30,7 @@ public class Exam03Controller {
 		String formatNoTaxResult = nfNum.format(noTaxResult);
 		
 		// 税込み価格(税率：10%）
-		int taxResult = (int) (noTaxResult*1.1);
+		int taxResult = (int) (noTaxResult * 1.1);
 		String formatTaxResult = nfNum.format(taxResult);
 		
 		application.setAttribute("formatNoTaxResult", formatNoTaxResult);
