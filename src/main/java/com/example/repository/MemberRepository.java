@@ -30,8 +30,8 @@ public class MemberRepository {
 
 	// 名前を曖昧検索
 	public List<Member> selectLikeName(String partOfName) {
-		String sql = "SELECT * FROM members WHERE name LIKE '%:partOfName%'";
-		SqlParameterSource param = new MapSqlParameterSource().addValue("partOfName", partOfName);
+		String sql = "SELECT * FROM members WHERE name LIKE :partOfName";
+		SqlParameterSource param = new MapSqlParameterSource().addValue("partOfName", "%" + partOfName + "%");
 		List<Member> members = new ArrayList<>();
 		members = template.query(sql, param, MEMBER_ROW_MAPPER);
 		return members;

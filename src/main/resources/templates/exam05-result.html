@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>exam05 検索結果</title>
+</head>
+<body>
+  <h1>検索結果</h1>
+  <div th:each="member : ${members}">
+    <span th:text="${member.name}"></span><br>
+  </div>
+</body>
+</html>
