@@ -6,7 +6,7 @@
 <title>exam04</title>
 </head>
 <body>
-	<h2>ユーザー登録</h2>
+	<h1>ユーザー登録</h1>
 	<form th:action="@{/exam04/result}" th:object="${userForm}" method="post">
 		<div th:errors="*{name}" class="errors"></div>
 		名前：<input type="text" name="name"  th:field="*{name}"><br>
