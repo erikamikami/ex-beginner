@@ -2,12 +2,12 @@
 <html lang="ja" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="../css/style.css" media="all" />
+<link rel="stylesheet" href="/css/style.css">
 <title>商品一覧</title>
 </head>
 <body>
   <header>
-    <img class="headerimg" src="../img/headerimg.png" alt="">
+    <img class="headerimg" src="/img/headerimg.png" alt="">
   </header>
   <div class="boxContainer">
     <div class="itemList" th:each="item,status : ${application.itemList}">
