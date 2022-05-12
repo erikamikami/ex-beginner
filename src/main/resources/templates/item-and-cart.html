@@ -5,6 +5,7 @@
 <title>商品一覧</title>
 </head>
 <body>
+　　<div class="boxContainer">
 　　<div class="itemList" th:each="item,status : ${application.itemList}">
     <span th:text="${item.name}"></span>
     <span th:text="${item.price}"></span>円
@@ -12,8 +13,17 @@
       <button>カートへ</button>
     </form>
   </div>
+  <hr>
+  <div class="cartList" th:each="cartList,status : ${session.cartList}">
+    <span th:text="${cartList.name}"></span>
+    <span th:text="${cartList.price}"></span>円
+    <form th:action="@{/exam06/delete?index=} + ${status.count}" method="post">
+      <button>削除</button>
+    </form><br>
+  </div>
   
-  <div class="cartList">
+  合計金額：【<span class="totalAmount" th:text="${totalAmount}"></span>】円
+
   </div>
 </body>
 </html>
