@@ -27,17 +27,19 @@ public class Exam05Controller {
 	public String result(String partOfName, Model model) {
 		List<Member> members = new ArrayList<>();
 
-		try {
-			members = repository.selectLikeName(partOfName);
+		members = repository.selectLikeName(partOfName);
+
+		if (members.size() == 0) {
+			model.addAttribute("noResult", "※ヒットは0件でした。");
+			return index();
+		} else {
 			model.addAttribute("members", members);
 			for (Member x : members) {
 				System.out.println(x);
 			}
 			return "exam05-result";
-		} catch (Exception e) {
-			model.addAttribute("noResult", "※ヒットは0件でした。");
-			return index();
 		}
+
 	}
 
 }
