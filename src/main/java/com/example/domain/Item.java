@@ -25,4 +25,14 @@ public class Item {
 		this.price = price;
 	}
 
+	public Item(String name, Integer price) {
+		super();
+		this.name = name;
+		this.price = price;
+	}
+
+	public Item() {
+
+	}
+
 }
