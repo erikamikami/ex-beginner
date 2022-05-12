@@ -36,6 +36,8 @@ public class Exam04Controller {
 		}
 		User user = new User();
 		BeanUtils.copyProperties(userForm, user);
+		Integer age = Integer.parseInt(userForm.getAge());
+		user.setAge(age);
 		model.addAttribute("user", user);
 		return "exam04-result";
 	}
