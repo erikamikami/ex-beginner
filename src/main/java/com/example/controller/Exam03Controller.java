@@ -22,11 +22,11 @@ public class Exam03Controller {
 	}
 	
 	@RequestMapping("/result")
-	public String result(int goods1, int goods2, int goods3) {
+	public String result(int item1, int item2, int item3) {
 		NumberFormat nfNum = NumberFormat.getNumberInstance();    //カンマ区切り形式
 		
 		// 税抜き価格
-		int noTaxResult = goods1 + goods2 + goods3;
+		int noTaxResult = item1 + item2 + item3;
 		String formatNoTaxResult = nfNum.format(noTaxResult);
 		
 		// 税込み価格(税率：10%）
