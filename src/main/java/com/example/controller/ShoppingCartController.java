@@ -68,6 +68,7 @@ public class ShoppingCartController {
 		return "redirect:/exam06";
 	}
 
+
 	// カートから削除
 	@RequestMapping("/delete")
 	public String delete(int index, Model model) {

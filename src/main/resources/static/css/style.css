@@ -1,42 +1,63 @@
 @charset "UTF-8";
 
 .errors {
-	color: red;
-	font-size: 13px;
+  color: red;
+  font-size: 13px;
 }
 
-header{
-	background-color: #F6463A;
-	width: 100%;
-	height: 100px;
-	margin-bottom: 10px;
-	display: flex;
+header {
+  background-color: #F6463A;
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
 }
 
-.headerimg{
-	width: 80%;
-	margin:0 auto;
-	padding: 10px;
+.headerimg {
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
 }
 
-.boxContainer{
-	display: flex;
-	margin:0 auto;
+.itemListBox {
+  float: left;
+  margin: 0 auto;
+  width: 50%;
 }
 
-.cartList{
-	margin:0 auto;
+.itemList {
+  text-align: center;
 }
 
-.itemList{
-	margin:0 auto;
+.cartListBox {
+  float: left;
+  margin: 0 auto;
+  width: 50%;
 }
 
-.totalAmount{
-	margin:0 auto;
-	text-align: center;
+.cartList {
+  text-align: center;
 }
 
-button{
-	background-color: #f5e9e2;
+h1 {
+  text-align: center; color : #F6463A;
+  font-size: 18px;
+  color: #F6463A;
 }
+
+.totalAmount {
+  margin: 0 auto;
+  text-align: center;
+  clear: both;
+  color: #F6463A;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+button {
+  background-color: #f5e9e2;
+  border: 1px solid gray;
+  padding: 3px 5px;
+  border-radius: 6px;
+  margin: 3px;
+}
+

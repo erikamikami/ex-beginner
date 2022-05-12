@@ -2,30 +2,39 @@
 <html lang="ja" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" th:href="@{/css/style.css}">
 <title>商品一覧</title>
 </head>
 <body>
   <header>
-    <img class="headerimg" src="/img/headerimg.png" alt="">
+    <img class="headerimg" th:src="@{/img/headerimg.png}" alt="">
   </header>
-  <div class="boxContainer">
+
+  <div class="itemListBox">
+    <h1>商品一覧</h1>
     <div class="itemList" th:each="item,status : ${application.itemList}">
       <span th:text="${item.name}">商品名</span>
-      <span th:text="${item.price}">値段</span>円
+      <span th:text="${item.price} + '円'">値段</span>
       <form th:action="@{/exam06/incart?index=} + ${status.count}" method="post">
         <button>カートへ</button>
       </form>
+      <br>
     </div>
+  </div>
 
+  <div class="cartListBox">
+    <h1>買い物かご一覧</h1>
     <div class="cartList" th:each="cartList,status : ${session.cartList}">
       <span th:text="${cartList.name}">商品名</span>
       <span th:text="${cartList.price}">値段</span>円
       <form th:action="@{/exam06/delete?index=} + ${status.count}" method="post">
         <button>削除</button>
-      </form><br>
-    </div><br>
+      </form>
+      <br>
+    </div>
+    <br>
   </div>
+
   <div class="totalAmount">
     合計金額：<span th:text="${totalAmount}"></span>円
   </div>
