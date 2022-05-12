@@ -63,10 +63,8 @@ public class ShoppingCartController {
 		// ショッピングカート(sessionスコープ内のリスト)に入れる
 		List<Item> cartList = (List<Item>) session.getAttribute("cartList");
 		cartList.add(newItem);
-		cartList.forEach(System.out::println);
 		session.setAttribute("cartList", cartList);
 
-		System.out.println("ここまで");
 		return "redirect:/exam06";
 	}
 

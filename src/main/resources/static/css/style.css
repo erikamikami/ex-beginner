@@ -1,10 +1,7 @@
 @charset "UTF-8";
 
-.errors{
+.errors {
 	color: red;
 	font-size: 13px;
 }
 
-/* .boxContainer{
-	display: flex;
-} */
