@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" type="text/css" href="../css/style.css" media="all" />
+<head>
+<meta charset="UTF-8">
+<title>exam04</title>
+</head>
+<body>
+	<h2>ユーザー登録</h2>
+	<form th:action="@{/exam04/result}" th:object="${userForm}" method="post">
+		<div th:errors="*{name}" class="errors"></div>
+		名前：<input type="text" name="name"  th:field="*{name}"><br>
+		
+		<div th:errors="*{age}" class="errors"></div>
+		年齢：<input type="text" name="age" th:field="*{age}"><br>
+		
+		<div th:errors="*{comment}" class="errors"></div>
+		コメント：<br>
+		<textarea rows="10" cols="30" name="comment" th:field="*{comment}"></textarea><br>
+		
+		<button>登録</button>
+	</form>
+</body>
+</html>
